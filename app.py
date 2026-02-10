@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import plotly.express as px
 
 # Set the page configuration
 st.set_page_config(
@@ -86,9 +87,6 @@ col1.metric("Transactions", f"{len(filtered_df):,}")
 col2.metric("Average Price", f"${filtered_df['resale_price'].mean():,.0f}")
 col3.metric("Median Price", f"${filtered_df['resale_price'].median():,.0f}")
 col4.metric("Median Floor Area", f"{filtered_df['floor_area_sqm'].median():.1f} sqm")
-
-
-import plotly.express as px
 
 st.header("Visual Analysis")
 
